@@ -24,3 +24,4 @@ console.log(result);
 let index = email.indexOf('@');
 console.log(index);
 console.log(email[index]);
+
