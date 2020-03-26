@@ -6,13 +6,18 @@ let user = {
     age: 48,
     blogs: ['L\'art du saucisson', 'La mergez du rond point', 'être gilet jaune à Bar'],
     email: 'maurice@gmail.com',
-    login: function(){
+    login(){
         console.log('the user logged in');
     },
-    logout: function(){
+    logout(){
         console.log('the user logged out');
+    },
+    logBlogs(){
+        console.log(`The blogs posts of ${this.name}`);
+        this.blogs.forEach(blog => {
+            console.log(blog);
+        });
     }
 };
 
-user.login();
-user.logout();
+user.logBlogs();
