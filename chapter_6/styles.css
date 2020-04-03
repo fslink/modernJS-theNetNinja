@@ -1,0 +1,14 @@
+.success {
+    color: rgb(153, 248, 1);
+    border: rgb(153, 248, 1) dotted 1px;
+}
+
+.error {
+    color: red;
+    border: red 1px dotted;
+}
+
+.tata {
+    color: blue;
+    border: blue 1px dotted;
+}
