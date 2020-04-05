@@ -1,16 +1,18 @@
 const button = document.querySelector('button');
+const ul = document.querySelector('ul');
 
 button.addEventListener('click', () =>{
-    console.log('You click to me !')
+    const li = document.createElement('li');
+    li.textContent = 'something new !';
+    // ul.append(li);
+    ul.prepend(li);
 });
 
 const items = document.querySelectorAll('li');
 
 items.forEach(item => {
-    // console.log(item);
     item.addEventListener('click', e => {
-        // console.log(e);
+        e.target.remove();
         // console.log(e.target);
-        e.target.style.textDecoration = 'line-through';
     });
-})
+});
