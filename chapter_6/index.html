@@ -4,64 +4,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document Object Model (Chapter 6)</title>
-    <style>
-        .box{
-            width: 200px;
-            height: 200px;
-            margin: 10px 0;
-            background: #eeeeee;
-            text-align: center;
-            padding: 20px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button>click me</button>
     
-   <p class="copy-me">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, inventore. Illum optio soluta assumenda maiores ea, voluptatem iusto eaque at</p>
-    <div class="box">move the mouse around this box</div>
+    <div class="popup-wrapper">
 
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae sapiente obcaecati saepe illo, amet nulla pariatur reprehenderit harum tempore provident, aperiam, inventore rem cupiditate officia veniam consequatur suscipit. Eligendi, iusto!</p>
+        <div class="popup">
+            <div class="popup-close">X</div>
+            <div class="popup-content">
+                <h2>NINJA SALE !</h2>
+                <p>50% off all ninja clothing, don't miss out !</p>
+                <a href="#">view clothing</a>
+            </div>
+        </div>
+    </div>
 
-    <script src="moreEvents.js"></script>
+    <script src="popup.js"></script>
 </body>
 </html>
