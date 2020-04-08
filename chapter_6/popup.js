@@ -1,16 +1,16 @@
-const copy = document.querySelector('.copy-me');
-copy.addEventListener('copy', () => {
-    console.log('OI you copy me buddy !');
+const button = document.querySelector('button');
+const popup = document.querySelector('.popup-wrapper');
+const close = document.querySelector('.popup-close');
+
+button.addEventListener('click', () => {
+    popup.style.display = 'block';
 });
 
-const box = document.querySelector('.box');
-box.addEventListener('mousemove', e => {
-    // console.log(e);
-    // console.log(e.offsetX, e.offsetY);
-    // console.log(e.target.textCon);
-    e.target.textContent = `pos x - ${e.offsetX} & pos y - ${e.offsetY}`;
+close.addEventListener('click', () => {
+    popup.style.display = 'none';
 });
 
-document.addEventListener('wheel', e => {
-    console.log(e.pageX, e.pageY);
-})
+popup.addEventListener('click', () => {
+    popup.style.display = 'none';
+});
+
