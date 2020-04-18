@@ -1,5 +1,6 @@
 const correctANswers = ['B', 'B','B', 'B'];
 const form = document.querySelector('.quiz-form');
+const resultScore = document.querySelector('.result');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -12,5 +13,19 @@ form.addEventListener('submit', e => {
         }
     });
 
-    console.log(score);
+    //resultScore.firstElementChild.firstElementChild.firstElementChild.textContent = score + '%';
+    window.scrollTo(0,0);
+    resultScore.querySelector('span').textContent = `${score}%`;
+    resultScore.classList.remove('d-none');
+
 });
+
+// console.log('hello');
+// window.console.log('hello');
+
+// alert('hello');
+// window.alert('hello');
+
+// window.setTimeout(() =>{
+//     window.alert('Salut ma gueule !');
+// }, 4000)
