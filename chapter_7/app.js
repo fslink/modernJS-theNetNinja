@@ -15,17 +15,15 @@ form.addEventListener('submit', e => {
 
     //resultScore.firstElementChild.firstElementChild.firstElementChild.textContent = score + '%';
     window.scrollTo(0,0);
-    resultScore.querySelector('span').textContent = `${score}%`;
     resultScore.classList.remove('d-none');
-
+    
+    let output = 0;
+    const timer = setInterval(() => {
+        resultScore.querySelector('span').textContent = `${output}%`;
+        if (output === score) {
+            clearInterval(timer);
+        } else {
+            output++;
+        }
+    }, 10);
 });
-
-// console.log('hello');
-// window.console.log('hello');
-
-// alert('hello');
-// window.alert('hello');
-
-// window.setTimeout(() =>{
-//     window.alert('Salut ma gueule !');
-// }, 4000)
