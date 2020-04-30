@@ -1,4 +1,4 @@
-const addTodo = document.querySelector('.add');
+const addTodoForm = document.querySelector('.add');
 const list = document.querySelector('.todos');
 
 const generateTemplate = todo => {
@@ -14,13 +14,20 @@ const generateTemplate = todo => {
 
 };
 
-addTodo.addEventListener('submit', e => {
+addTodoForm.addEventListener('submit', e => {
     e.preventDefault();
-    const todo = addTodo.add.value.trim();
+    const todo = addTodoForm.add.value.trim();
 
     if(todo.length){
         generateTemplate(todo);
-        addTodo.reset();
+        addTodoForm.reset();
     }
     
+});
+
+// delete todo
+list.addEventListener('click', e => {
+    if(e.target.classList.contains('delete')){
+        e.target.parentElement.remove();
+    }
 });
