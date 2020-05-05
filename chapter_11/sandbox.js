@@ -1,9 +1,14 @@
-console.log(1);
-console.log(2);
+//JSONPLaceHolder
 
-setTimeout(() => {
-    console.log('callback async fired !');
-}, 2000);
+const request = new XMLHttpRequest();
 
-console.log(3);
-console.log(4);
+request.addEventListener('readystatechange', () => {
+    console.log(request, request.readyState);
+    if(request.readyState === 4){
+        console.log(request.responseText);
+    }
+    
+});
+
+request.open('GET', 'https://jsonplaceholder.typicode.com/todos');
+request.send();
