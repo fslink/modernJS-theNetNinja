@@ -1,6 +1,6 @@
 //JSONPLaceHolder
 
-const getTodos = (callback) => {
+const getTodos = (ressource, callback) => {
     const request = new XMLHttpRequest();
 
     request.addEventListener('readystatechange', () => {
@@ -14,16 +14,24 @@ const getTodos = (callback) => {
         
     });
 
-    request.open('GET', 'todos.json');
+    request.open('GET', ressource);
     request.send();
 };
 
-getTodos((err, data) => {
+getTodos('todos/luigi.json', (err, data) => {
     console.log('callback fired !');
-
-    if(err){
-        console.log(err);
-    } else {
+    if(data){
         console.log(data);
+        getTodos('todos/mario.json', (err, data) => {
+            if(data){
+                console.log(data);
+                getTodos('todos/soso.json', (err, data) => {
+                    if(data){
+                        console.log(data);
+                    }
+                });
+            }
+        });
     }
+    
 });
