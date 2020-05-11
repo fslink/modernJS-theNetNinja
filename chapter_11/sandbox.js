@@ -23,6 +23,12 @@ const getTodos = (ressource) => {
 
 getTodos('todos/mario.json').then(data => {
     console.log(data);
-}, err => {
+    return getTodos('todos/luigi.json');
+}).then(data => {
+    console.log(data);
+    return getTodos('todos/soso.json');
+}).then(data => {
+    console.log(data);
+}).catch(err => {
     console.log(err);
-});
+})
