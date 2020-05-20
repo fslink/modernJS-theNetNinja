@@ -1,11 +1,13 @@
-// localStorage.setItem('name', 'mario');
-// localStorage.setItem('age', 80);
+const todos = [
+    {author : 'soso', todo: 'looking for sfr email', rank: 5},
+    {author : 'soso', todo: 'amazon books', rank: 4},
+    {author : 'soso', todo: 'ENI receipt', rank: 5},
+];
 
-console.log(localStorage.name, localStorage.age);
+// console.log(JSON.stringify(todos));
+localStorage.setItem('todos', JSON.stringify(todos));
 
-const name = localStorage.getItem('name');
-const age = localStorage.getItem('age');
+let stored = localStorage.getItem('todos');
 
-console.log(name, age);
-
-// localStorage.setItem('name', 'luigi');
+stored = JSON.parse(stored);
+console.log(stored);
