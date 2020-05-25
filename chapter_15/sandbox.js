@@ -33,7 +33,16 @@ class User {
     }
 }
 
+class Admin extends User{
+    deleteUSer(user){
+        users = users.filter(u => u.username !== user.username);
+    }
+}
+
 const userTwo = new User('mario', 'mario@gmail.com');
 const userThree = new User('luigi', 'luigi@gmail.com');
+const userFour = new Admin('sofiann', 'sofiann@gmail.com');
 
-userTwo.logIn().incScore().incScore().logOut();
+let users = [userTwo, userThree, userFour];
+userFour.deleteUSer(userThree);
+console.log(users);
