@@ -16,9 +16,10 @@ const addRecipieUI = (recipie) => {
     }
     
     let html = `
-        <li>
+        <li data-id="${recipie.id}">
             <div>${title}</div>
             <div>${time}</div>
+            <button class="btn btn-danger btn-sm my-3">delete</button>
         </li>
     `;
     recipiesList.innerHTML += html;
@@ -44,4 +45,14 @@ form.addEventListener('submit', e => {
     db.collection("recipies").add(recipe).then(() => {
         console.log("recipie added");
     })
+});
+
+recipiesList.addEventListener('click', e => {
+    if(e.target.tagName == 'BUTTON'){
+        const id = e.target.parentElement.getAttribute('data-id');
+        db.collection('recipies').doc(id).delete().then(() => {
+            console.log('element deleted !');
+        });
+    }
+    
 })
