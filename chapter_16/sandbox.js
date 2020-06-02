@@ -1,7 +1,8 @@
 const recipiesList = document.querySelector('ul');
 const form = document.querySelector('form');
+const button = document.querySelector('button');
 
-const addRecipieUI = (recipie) => {
+const addRecipieUI = recipie => {
     let title = recipie.data().title;
     let time;
 
@@ -25,14 +26,28 @@ const addRecipieUI = (recipie) => {
     recipiesList.innerHTML += html;
 };
 
-//get recipies
-db.collection("recipies").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        addRecipieUI(doc);
-    });
-});
+const deleteRecipieUI = id => {
+    const recipes = document.querySelectorAll('li');
+    recipes.forEach(recipe => {
+        if(recipe.getAttribute('data-id') === id){
+            recipe.remove();
+        }
+    })
+}
 
-//add recipies
+//get recipies
+const unsub = db.collection('recipies').onSnapshot(snapshot => {
+    snapshot.docChanges().forEach(change => {
+        if(change.type === 'added'){
+            addRecipieUI(change.doc);
+
+        } else if(change.type === 'removed'){
+            deleteRecipieUI(change.doc.id);
+        }
+    });
+})
+
+//add recipes
 form.addEventListener('submit', e => {
     e.preventDefault();
     const now = new Date();
@@ -47,12 +62,19 @@ form.addEventListener('submit', e => {
     })
 });
 
+//delete recipes
 recipiesList.addEventListener('click', e => {
     if(e.target.tagName == 'BUTTON'){
         const id = e.target.parentElement.getAttribute('data-id');
         db.collection('recipies').doc(id).delete().then(() => {
-            console.log('element deleted !');
+            console.log('document deleted !');
         });
     }
     
-})
+});
+
+//unsubsribe live snapshot
+button.addEventListener('click', () => {
+    unsub();
+    console.log('unsubsribe live snapshot');
+});
