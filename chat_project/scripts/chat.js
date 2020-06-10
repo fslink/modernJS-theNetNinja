@@ -31,7 +31,6 @@ class Chatroom {
             .onSnapshot(snapshot => {
                 snapshot.docChanges().forEach(change => {
                     if(change.type === 'added'){
-                        // callback(change.data());
                         callback(change.doc.data());
                     }
                 });
@@ -39,6 +38,7 @@ class Chatroom {
     }
     updateName(username){
         this.username = username;
+        localStorage.setItem('username', this.username);
     }
     updateRoom(room){
         this.room = room;
