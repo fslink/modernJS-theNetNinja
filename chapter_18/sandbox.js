@@ -1,17 +1,49 @@
-// rest parameter
-const double = (...nums) => {
-    return nums;
-}
+// new Set() filtre les doublons d'un tableau
+const perso = ['samir', 'jedi', 'mehdi', 'samir', 'guillaume'];
 
-let result = double(1,5,6,9,7,10,589,78,63,2,56,7,78,10);
-console.log(result);
+let result = new Set(perso);
+// console.log(result);
 
-// spread synthax
-const newDouble = [10000, ...result];
-console.log(newDouble);
+// result = [...result];
+// console.log(result);
 
-// spread object synthax
-const person = {name: 'sofiann', age: 32};
-const personClone = {...person, location: 'Nancy'};
+// add()
+result.add(25).add('mehdi').add(20).add('jedi').add('mathieu');
 
-console.log(person, personClone);
+// delete()
+result.delete('guillaume');
+
+// clear()
+// result.clear();
+
+// foreach()
+const persDetails = new Set([
+    {name: 'roger', age: 50},
+    {name: 'thomas', age: 30},
+    {name: 'samir', age: 38}
+]);
+
+console.log(result, result.size);
+console.log(result.has(25), result.has('roger'));
+
+persDetails.forEach(perso => {
+    console.log(perso.name, perso.age);
+});
+
+// Symbols
+
+const symbolOne = Symbol('a symbol');
+const symbolTwo = Symbol('a symbol');
+
+console.log(symbolOne == symbolTwo);
+
+const newPersos = [
+    {name: 'roger', age: 50},
+    {name: 'thomas', age: 30},
+    {name: 'samir', age: 38}
+];
+
+newPersos[0][symbolTwo] = 'orange';
+newPersos[0][symbolOne] = 'blue';
+
+console.log(newPersos);
